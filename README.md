@@ -1,4 +1,4 @@
-### Making a LiDAR Sensor message processing package for automated driving system studying ROS
+### Making a LiDAR Sensor message processing package for automated driving system
 
 1. setting up the sensor position in MORAI program (drivng simulation program)
 2. Calling data sensor data using velodyne API
