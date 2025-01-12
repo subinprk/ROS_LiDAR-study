@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0.2)
-project(lidar_processing)
+project(sb_lidar_process)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
 # add_compile_options(-std=c++11)
@@ -106,9 +106,9 @@ generate_messages(
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
  INCLUDE_DIRS include
- LIBRARIES lidar_processing
+ LIBRARIES sb_lidar_process
  CATKIN_DEPENDS message_generation pcl_conversions pcl_ros roscpp sensor_msgs
-#  DEPENDS system_lib
+ DEPENDS system_lib
 )
 
 ###########
@@ -124,7 +124,7 @@ include_directories(
 
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
-#   src/${PROJECT_NAME}/lidar_processing.cpp
+  # src/${PROJECT_NAME}/main.cpp
 # )
 
 ## Add cmake target dependencies of the library
@@ -135,7 +135,7 @@ include_directories(
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
-# add_executable(${PROJECT_NAME}_node src/lidar_processing_node.cpp)
+add_executable(${PROJECT_NAME}_node src/main.cpp src/sb_lidar_process)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -148,9 +148,9 @@ include_directories(
 # add_dependencies(${PROJECT_NAME}_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
-# target_link_libraries(${PROJECT_NAME}_node
-#   ${catkin_LIBRARIES}
-# )
+target_link_libraries(${PROJECT_NAME}_node
+  ${catkin_LIBRARIES}
+)
 
 #############
 ## Install ##
@@ -199,21 +199,10 @@ include_directories(
 #############
 
 ## Add gtest based cpp test target and link libraries
-# catkin_add_gtest(${PROJECT_NAME}-test test/test_lidar_processing.cpp)
+# catkin_add_gtest(${PROJECT_NAME}-test test/test_sb_lidar_process.cpp)
 # if(TARGET ${PROJECT_NAME}-test)
 #   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
 # endif()
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
-
-add_library(lidar_processing
-  # some functions like downsampling, ROI, clustering whatever
-)
-
-
-add_executable(lidar_processing src/main.cpp)
-target_link_libraries(lidar_processing #node name
-    lidar_processing #package name
-    ${catkin_LIBRARIES}
-)
