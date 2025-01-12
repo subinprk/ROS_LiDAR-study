@@ -25,4 +25,8 @@
 //ROI setting
 #include <pcl/filters/passthrough.h>
 
+//ROI_CPP
+
+void ROI(const pcl::PointCloud<pcl::PointXYZ>::Ptr &input_cloud);
+
 #endif
