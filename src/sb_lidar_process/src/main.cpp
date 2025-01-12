@@ -5,18 +5,17 @@ using namespace sb_lidar_process;
 ros::Publisher pub;
 
 void callback(const sensor_msgs::PointCloud2 &msg){
-    //add time-consuming processing here
-
     pcl::PCLPointCloud2 pcl_pc;
     pcl_conversions::toPCL(msg, pcl_pc);
     pcl::PointCloud<pcl::PointXYZ>::Ptr input_cloud;
     pcl::fromPCLPointCloud2(pcl_pc, *input_cloud);
 
-    //applying ROI function into cloud
     ROI(input_cloud);
-    
-    //voxel_grid filter
     voxelGrid(input_cloud);
+
+    //RANSAC
+
+    //Euclidean Clustering
 
     std::this_thread::sleep_for(std::chrono::milliseconds(50));
 
