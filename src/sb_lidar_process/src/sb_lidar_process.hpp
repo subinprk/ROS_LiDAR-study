@@ -27,6 +27,6 @@
 
 //ROI_CPP
 
-void ROI(const pcl::PointCloud<pcl::PointXYZ>::Ptr &input_cloud);
+void ROI(pcl::PointCloud<pcl::PointXYZ>::Ptr &input_cloud);
 
 #endif
