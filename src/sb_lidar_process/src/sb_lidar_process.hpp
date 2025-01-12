@@ -14,7 +14,7 @@
 
 //messages
 #include <sensor_msgs/PointCloud2.h>
-#include <sb_lidar_process::obsts.h>
+#include <sb_lidar_process/obsts.h>
 
 //PointCloud2
 #include <pcl/conversions.h>
