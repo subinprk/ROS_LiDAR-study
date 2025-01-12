@@ -14,6 +14,9 @@ void callback(const sensor_msgs::PointCloud2 &msg){
 
     //applying ROI function into cloud
     ROI(input_cloud);
+    
+    //voxel_grid filter
+    voxelGrid(input_cloud);
 
     std::this_thread::sleep_for(std::chrono::milliseconds(50));
 

@@ -19,4 +19,6 @@ void ROI(pcl::PointCloud<pcl::PointXYZ>::Ptr &input_cloud){
     zfilter.setFilterFieldName("z");
     zfilter.setFilterLimits(0, 1.5); //limit 지정
     zfilter.filter(*input_cloud);
+
+    return ;
 }

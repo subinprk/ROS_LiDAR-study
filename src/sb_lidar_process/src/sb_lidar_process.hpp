@@ -25,8 +25,14 @@
 //ROI setting
 #include <pcl/filters/passthrough.h>
 
-//ROI_CPP
+//Downsampling
+#include <pcl/filters/voxel_grid.h>
 
+
+//roi_cpp
 void ROI(pcl::PointCloud<pcl::PointXYZ>::Ptr &input_cloud);
+
+//voxel_grid_cpp
+void voxelGrid(pcl::PointCloud<pcl::PointXYZ>::Ptr &input_cloud);
 
 #endif
