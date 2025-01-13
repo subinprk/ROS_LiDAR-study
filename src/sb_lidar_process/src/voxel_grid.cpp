@@ -1,4 +1,4 @@
-#include "sb_lidar_process.hpp"
+#include <sb_lidar_process/sb_lidar_process.hpp>
 
 void voxelGrid(pcl::PointCloud<pcl::PointXYZ>::Ptr &input_cloud){
     pcl::VoxelGrid<pcl::PointXYZ> down;

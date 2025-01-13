@@ -1,4 +1,4 @@
-#include "sb_lidar_process.hpp"
+#include <sb_lidar_process/sb_lidar_process.hpp>
 
 void ROI(pcl::PointCloud<pcl::PointXYZ>::Ptr &input_cloud){
     pcl::PassThrough<pcl::PointXYZ> xfilter;

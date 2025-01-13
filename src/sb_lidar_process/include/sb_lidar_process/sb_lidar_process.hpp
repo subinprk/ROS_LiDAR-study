@@ -41,5 +41,6 @@ void ROI(pcl::PointCloud<pcl::PointXYZ>::Ptr &input_cloud);
 void voxelGrid(pcl::PointCloud<pcl::PointXYZ>::Ptr &input_cloud);
 
 //planar_segmentation_cpp
+void    ransac(pcl::PointCloud<pcl::PointXYZ>::Ptr &input_cloud);
 
 #endif

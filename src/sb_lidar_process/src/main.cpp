@@ -1,4 +1,4 @@
-#include "./sb_lidar_process.hpp"
+#include <sb_lidar_process/sb_lidar_process.hpp>
 
 using namespace sb_lidar_process;
 
@@ -14,6 +14,7 @@ void callback(const sensor_msgs::PointCloud2 &msg){
     voxelGrid(input_cloud);
 
     //RANSAC
+    ransac(input_cloud);
 
     //Euclidean Clustering
 

@@ -138,6 +138,7 @@ include_directories(
 add_executable(${PROJECT_NAME}_node src/main.cpp
                 src/roi.cpp
                 src/voxel_grid.cpp
+                src/planar_segmentation.cpp
               )
 
 ## Rename C++ executable without prefix
