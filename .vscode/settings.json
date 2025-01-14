@@ -1,3 +1,9 @@
 {
-    "cmake.sourceDirectory": "/home/autonav/subin/ROS_LiDAR-study/src/sb_lidar_process"
+    "cmake.sourceDirectory": "/home/autonav/subin/ROS_LiDAR-study/src/sb_lidar_process",
+    "python.autoComplete.extraPaths": [
+        "/opt/ros/noetic/lib/python3/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/opt/ros/noetic/lib/python3/dist-packages"
+    ]
 }

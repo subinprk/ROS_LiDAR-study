@@ -139,6 +139,7 @@ add_executable(${PROJECT_NAME}_node src/main.cpp
                 src/roi.cpp
                 src/voxel_grid.cpp
                 src/planar_segmentation.cpp
+                src/clustering.cpp
               )
 
 ## Rename C++ executable without prefix
