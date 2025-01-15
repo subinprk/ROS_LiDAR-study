@@ -34,6 +34,11 @@
 #include <pcl/sample_consensus/model_types.h>
 #include <pcl/segmentation/sac_segmentation.h>
 
+//Euclidean Clustering
+#include <pcl/search/kdtree.h>
+#include <pcl/segmentation/extract_clusters.h>
+#include <iomanip> // for setw, setfill
+
 //roi_cpp
 void ROI(pcl::PointCloud<pcl::PointXYZ>::Ptr &input_cloud);
 
@@ -42,5 +47,8 @@ void voxelGrid(pcl::PointCloud<pcl::PointXYZ>::Ptr &input_cloud);
 
 //planar_segmentation_cpp
 void    ransac(pcl::PointCloud<pcl::PointXYZ>::Ptr &input_cloud);
+
+//euclidean clustering
+void clustering(pcl::PointCloud<pcl::PointXYZ>::Ptr &input_cloud);
 
 #endif
